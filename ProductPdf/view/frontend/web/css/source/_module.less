@@ -1,0 +1,86 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    [id='tab-label-product.info.downloads'], [id='product.info.downloads'] {
+        display: none;
+    }
+
+    .product-pdf {
+        .download-link {
+            width: 100%;
+            display: block;
+            text-align: center;
+            color: @text__color;
+            vertical-align: top;
+            margin-bottom: 50px;
+            &:hover {
+                text-decoration: none;
+                .download-icon .arrow {
+                    transform: translate(0,5px);
+                }
+                .file-name {
+                    border-bottom: 1px solid #D0011B;
+                }
+            }
+        }
+
+        .download-icon-wrapper {
+            padding: 8px 0;
+            margin-top: -8px;
+        }
+
+        .download-icon {
+            .arrow {
+                transition: transform linear .3s;
+            }
+        }
+
+        .file-name {
+            display: inline-block;
+            transition: all linear .3s;
+            padding-bottom: 1px;
+            border-bottom: 1px solid #fff;
+            //overflow: hidden;
+            //white-space: nowrap;
+            //text-overflow: ellipsis;
+            //word-wrap: break-word;
+            //max-width: 80%;
+            //box-sizing: border-box;
+            //margin: auto;
+            //height: 50px;
+        }
+        
+        .text-wrapper {
+            //overflow: hidden;
+            //text-overflow: ellipsis;
+            max-width: 80%;
+            box-sizing: border-box;
+            margin: auto;
+            //height: 70px;
+        }
+
+        .file-type {
+            display: block;
+            color: #d0011b;
+            padding-top: 5px;
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+//.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) { }
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .product-pdf {
+        .download-link {
+            width: 32.5%;
+            display: inline-block;
+            &:not(:nth-child(3n+1)) .download-icon-wrapper {
+                border-left: solid 1px #f0f0f0;
+            }
+        }
+    }
+}

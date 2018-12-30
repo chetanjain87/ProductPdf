@@ -1,0 +1,62 @@
+<div class="downloads-wrapper product-pdf <?php echo $block->downloadsAvailable() ?>">
+    <?php if($pdf = $block->getPdfFilePath($block->getPdfOneAttrCode())): ?>
+
+        <a target="_blank" href="<?php echo $pdf; ?>" class="download-link">
+            <div class="download-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="55" viewBox="0 0 64 55" class="download-icon">
+                    <g fill="none">
+                        <polygon class="tray" fill="#C5C5C5" points="59.89 32 59.89 50.831 4.11 50.831 4.11 32 0 32 0 55 64 55 64 32"/>
+                        <polygon class="arrow" fill="#D0011B" points="30.452 0 30.452 33.241 20.004 22.941 17 25.884 32.5 41 48 25.884 44.996 22.941 34.685 33.108 34.685 0"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="text-wrapper">
+                <div class="action-label"><?php echo __('Download') ?></div>
+                <div class="file-name"><?php echo $block->getPdfFileName($block->getPdfOneAttrCode()) ?><span class="file-type">(<?php echo __('pdf') ?>)</span></div>
+            </div>
+        </a>
+    <?php endif ?>
+
+    <?php if($pdf = $block->getPdfFilePath($block->getPdfTwoAttrCode())): ?>
+        <a target="_blank" href="<?php echo $pdf; ?>" class="download-link">
+            <div class="download-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="55" viewBox="0 0 64 55" class="download-icon">
+                    <g fill="none">
+                        <polygon class="tray" fill="#C5C5C5" points="59.89 32 59.89 50.831 4.11 50.831 4.11 32 0 32 0 55 64 55 64 32"/>
+                        <polygon class="arrow" fill="#D0011B" points="30.452 0 30.452 33.241 20.004 22.941 17 25.884 32.5 41 48 25.884 44.996 22.941 34.685 33.108 34.685 0"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="text-wrapper">
+                <div class="action-label"><?php echo __('Download') ?></div>
+                <div class="file-name"><?php echo $block->getPdfFileName($block->getPdfTwoAttrCode()) ?><span class="file-type">(<?php echo __('pdf') ?>)</span></div>
+            </div>
+        </a>
+    <?php endif ?>
+
+    <?php if($pdf = $block->getPdfFilePath($block->getPdfThreeAttrCode())): ?>
+        <a target="_blank" href="<?php echo $pdf; ?>" class="download-link">
+            <div class="download-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="55" viewBox="0 0 64 55" class="download-icon">
+                    <g fill="none">
+                        <polygon class="tray" fill="#C5C5C5" points="59.89 32 59.89 50.831 4.11 50.831 4.11 32 0 32 0 55 64 55 64 32"/>
+                        <polygon class="arrow" fill="#D0011B" points="30.452 0 30.452 33.241 20.004 22.941 17 25.884 32.5 41 48 25.884 44.996 22.941 34.685 33.108 34.685 0"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="text-wrapper">
+                <div class="action-label"><?php echo __('Download') ?></div>
+                <div class="file-name"><?php echo $block->getPdfFileName($block->getPdfThreeAttrCode()) ?><span class="file-type">(<?php echo __('pdf') ?>)</span></div>
+            </div>
+        </a>
+    <?php endif ?>
+</div>
+<script>
+    require([
+        'jquery'
+    ], function($){
+        if ( $(".downloads-wrapper").hasClass("downloads-available") ) {
+            $("#tab-label-product\\.info\\.downloads, #product\\.info\\.downloads").fadeIn();
+        }
+    });
+</script>

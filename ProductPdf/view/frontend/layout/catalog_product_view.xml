@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-right" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="product.info.details">
+            <block class="Chetan\ProductPdf\Block\Product\View\Pdf" name="product.info.downloads" template="Chetan_ProductPdf::product/view/pdf.phtml" group="detailed_info">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">downloads</argument>
+                    <argument name="at_label" xsi:type="string">none</argument>
+                    <argument name="title" translate="true" xsi:type="string">Downloads</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

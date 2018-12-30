@@ -1,0 +1,21 @@
+{
+    "name": "Chetan/module-productpdf",
+    "description": "Chetan ProductPdf",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "email": "ichetan.jain@gmail.com",
+            "name": "Chetan Jain"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Chetan\\ProductPdf\\": ""
+        }
+    }
+}
