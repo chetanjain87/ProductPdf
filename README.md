@@ -11,3 +11,10 @@ System requirements The Chetan_ProductPdf module does not have any specific syst
 Install:
 
 php bin/magento setup:upgrade
+
+
+Screenshot:-
+
+![Imagge1](https://github.com/chetanjain87/Chetan/blob/master/admin_pdf.png)
+
+![Imagge1](https://github.com/chetanjain87/Chetan/blob/master/product_details.png)
